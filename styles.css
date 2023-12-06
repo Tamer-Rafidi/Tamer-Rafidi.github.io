@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.name{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #f9eede;
+  margin : 0px 1rem;
+}
+li, .main_nav a, button{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.main_nav a{
+ color: #f9eede;
+ text-decoration: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: #2d2c2a;
+}
+.main_nav{
+ list-style: none;
+}
+
+.main_nav li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.main_nav li a{
+  transition: all 0.3s ease 0s;
+}
+
+.main_nav li a:hover{
+  color: #96b6b1;
+}
+
+button{
+  padding: 10px 20px;
+  background-color: #96b6b1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: #7f9692;
+}
+
+.modal{
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0,0,0,0.3);
+ position: absolute;
+ top: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.glass{
+ width: 500px;
+ height: 30%;
+ padding: 10px 50px;
+ background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255, 255, 255, 0.1));
+ backdrop-filter: blur(10px);
+ -webkit-backdrop-filter: blur(10px);
+ border-radius: 20px;
+ border: 1px solid rgba(255,255,255,0.18);
+ box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.37);
+}
+
+.glass .name_contact{
+ font-family: 'Montserrat', sans-serif;
+ color: #f7b42d;
+ display: flex;
+ justify-content: center;
+}
+
+.About{
+ padding: 0px 0px;
+ height: 1000px;
+ background-color: #f9eede;
+}
+.about_me{
+ font-family: 'Montserrat', sans-serif;
+ color: #2d2c2a;
+}
+
+
+.background{
+ width: 100%;
+ height: 100%;
+}
+
+.icons{
+ height: 80%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+}
+
+.contact-images{
+ width: 20px;
+ height: 20px;
+ gap: 10px;
+}
+
