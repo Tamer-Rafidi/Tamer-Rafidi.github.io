@@ -21,8 +21,8 @@ li, .main_nav a, button{
 }
 
 .main_nav a{
- color: #f9eede;
- text-decoration: none;
+  color: #f9eede;
+  text-decoration: none;
 }
 
 header{
@@ -33,7 +33,7 @@ header{
   background-color: #2d2c2a;
 }
 .main_nav{
- list-style: none;
+  list-style: none;
 }
 
 .main_nav li{
@@ -49,7 +49,7 @@ header{
   color: #96b6b1;
 }
 
-button{
+.cta{
   padding: 10px 20px;
   background-color: #96b6b1;
   border: none;
@@ -58,66 +58,100 @@ button{
   transition: all 0.3s ease 0s;
 }
 
-button:hover{
+.cta:hover{
   background-color: #7f9692;
 }
 
 .modal{
- width: 100%;
- height: 100%;
- background-color: rgba(0,0,0,0.3);
- position: absolute;
- top: 0;
- display: flex;
- justify-content: center;
- align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
 }
 
 .glass{
- width: 500px;
- height: 30%;
- padding: 10px 50px;
- background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255, 255, 255, 0.1));
- backdrop-filter: blur(10px);
- -webkit-backdrop-filter: blur(10px);
- border-radius: 20px;
- border: 1px solid rgba(255,255,255,0.18);
- box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.37);
+  width: 500px;
+  height: 30%;
+  padding: 10px 50px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.37);
 }
 
-.glass .name_contact{
- font-family: 'Montserrat', sans-serif;
- color: #f7b42d;
- display: flex;
- justify-content: center;
+.glass .contact-header{
+  font-family: 'Montserrat', sans-serif;
+  color: #96b6b1;
+  display: flex;
+  justify-content: center;
 }
 
 .About{
- padding: 0px 0px;
- height: 1000px;
- background-color: #f9eede;
+  padding: 0px 0px;
+  height: 1000px;
+  background-color: #f9eede;
 }
 .about_me{
- font-family: 'Montserrat', sans-serif;
- color: #2d2c2a;
+  font-family: 'Montserrat', sans-serif;
+  color: #2d2c2a;
 }
 
 
 .background{
- width: 100%;
- height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .icons{
- height: 80%;
- display: flex;
- flex-direction: column;
- justify-content: space-evenly;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .contact-images{
- width: 20px;
- height: 20px;
- gap: 10px;
+  width: 30px;
+  height: 30px;
+  gap: 10px;
+}
+
+.close{
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 50px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.email{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.linkedin{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#linkedin-logo{
+  transition: all 0.3s ease 0s;
+}
+
+#linkedin-logo:hover{
+  filter: invert(40%) sepia(1%) saturate(3323%) hue-rotate(123deg) brightness(107%) contrast(92%);
+}
+
+span{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
 }
 
