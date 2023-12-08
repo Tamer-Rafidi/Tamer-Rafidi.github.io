@@ -101,6 +101,15 @@
   gap: 10px;
 }
 
+.following:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.followers:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 li, .main_nav a, button{
   font-family: 'Montserrat', sans-serif;
