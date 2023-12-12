@@ -439,19 +439,19 @@ span{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: red 5px solid;
+  /* border: red 5px solid; */
 }
 
-.about-me h1{
+.about-header{
   color: #2d2c2a;
   margin : 0px 1rem;
-  border: blue 5px solid;
+  /* border: blue 5px solid; */
   margin-top: 2%;
 }
 
 .about-content{
   display: flex;
-  width: 80%;
+  width: 90%;
   height: 80vh;
   flex-direction: row;
   justify-content: space-between;
@@ -478,17 +478,40 @@ span{
   /* border: red 5px solid; */
 }
 
-.item1{
-  border: red 5px solid;  
+.item1, .item2, .item3, .item4{
+  /* border: red 5px solid;   */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.item1 img{
+.about-content img{
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin: 10px;
 }
 
+.about-intro p{
+  color: #2d2c2a;
+  background-color: #96b6b1;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.37);
+}
+
+.stat1, .stat2, .stat3{
+  color: #2d2c2a;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.border{
+  background-color: #96b6b1;
+  width: 50%;
+  height: 5px;
+  border-radius: 10px;
+}

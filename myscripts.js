@@ -45,3 +45,37 @@ window.addEventListener("scroll", () => {
   }
 });
 
+const about = document.querySelector(".navbar-about");
+const targetElement = document.querySelector(".about-me");
+
+about.addEventListener("click", () => {
+  targetElement.scrollIntoView({ behavior: "smooth" });
+});
+
+let counter = document.querySelector(".counter");
+let target = 10000;
+let count = 0;
+let minIncrement = 1; // minimum increment
+let maxIncrement = 100; // maximum increment
+
+let observer = new IntersectionObserver(
+  function (entries) {
+    if (entries[0].isIntersecting === true) {
+      let interval = setInterval(function () {
+        let increment =
+          Math.random() * (maxIncrement - minIncrement) + minIncrement;
+        if (count < target) {
+          count += increment;
+          counter.innerText = Math.round(count);
+        } else {
+          counter.innerText = "10k+";
+          clearInterval(interval);
+        }
+      }, 10);
+      observer.unobserve(counter);
+    }
+  },
+  { threshold: [0] }
+);
+
+observer.observe(counter);
