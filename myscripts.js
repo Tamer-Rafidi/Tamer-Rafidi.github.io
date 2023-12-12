@@ -35,13 +35,27 @@ document.querySelector(".following-close").addEventListener("click", function ()
     toggleModal(".following-modal", false);
   });
 
-const toTop = document.querySelector(".to-top");
+document.querySelector(".following").addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+document.querySelector(".followers").addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});  
+
+const following = document.querySelector(".following");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
-    toTop.classList.add("active");
+    following.classList.add("active");
   } else {
-    toTop.classList.remove("active");
+    following.classList.remove("active");
   }
 });
 
