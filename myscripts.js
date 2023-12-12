@@ -57,11 +57,12 @@ let target = 10000;
 let count = 0;
 let minIncrement = 1; // minimum increment
 let maxIncrement = 100; // maximum increment
+let interval; // Declare interval variable outside the observer callback
 
-let observer = new IntersectionObserver(
+let observerEnter = new IntersectionObserver(
   function (entries) {
     if (entries[0].isIntersecting === true) {
-      let interval = setInterval(function () {
+      interval = setInterval(function () {
         let increment =
           Math.random() * (maxIncrement - minIncrement) + minIncrement;
         if (count < target) {
@@ -70,12 +71,117 @@ let observer = new IntersectionObserver(
         } else {
           counter.innerText = "10k+";
           clearInterval(interval);
+          observerEnter.unobserve(counter);
         }
       }, 10);
-      observer.unobserve(counter);
+    }
+  },
+);
+
+let observerLeave = new IntersectionObserver(
+  function (entries) {
+    if (!entries[0].isIntersecting) {
+      count = 0;
+      counter.innerText = "0";
+      clearInterval(interval); 
+      observerEnter.observe(counter); 
     }
   },
   { threshold: [0] }
 );
 
-observer.observe(counter);
+observerEnter.observe(counter);
+observerLeave.observe(counter);
+
+let counter2 = document.querySelector(".project-counter");
+let target2 = 18;
+let count2 = 0;
+let increment = 1;
+let interval2;
+
+let observerEnter2 = new IntersectionObserver(
+  function (entries) {
+    if (entries[0].isIntersecting === true) {
+      interval2 = setInterval(function () {
+        if (count2 < target2) {
+          count2 += increment;
+          counter2.innerText = count2;
+        } 
+        else {
+          clearInterval(interval2);
+          observerEnter2.unobserve(counter2);
+        }
+      }, 100);
+    }
+  },
+);
+
+let observerLeave2 = new IntersectionObserver(
+  function (entries) {
+    if (!entries[0].isIntersecting) {
+      count2 = 0;
+      counter2.innerText = "0";
+      clearInterval(interval2);
+      observerEnter2.observe(counter2);
+    }
+  },
+  { threshold: [0] }
+);
+
+observerEnter2.observe(counter2);
+observerLeave2.observe(counter2);
+
+let counter3 = document.querySelector(".experience-counter");
+let target3 = 3;
+let count3 = 0;
+let interval3;
+
+let observerEnter3 = new IntersectionObserver(function (entries) {
+  if (entries[0].isIntersecting === true) {
+    interval3 = setInterval(function () {
+      if (count3 < target3) {
+        count3 += increment;
+        counter3.innerText = count3;
+      } else {
+        clearInterval(interval3);
+        observerEnter3.unobserve(counter3);
+      }
+    }, 200);
+  }
+});
+
+let observerLeave3 = new IntersectionObserver(
+  function (entries) {
+    if (!entries[0].isIntersecting) {
+      count3 = 0;
+      counter3.innerText = "0";
+      clearInterval(interval3);
+      observerEnter3.observe(counter3);
+    }
+  },
+  { threshold: [0.5] }
+);
+
+observerEnter3.observe(counter3);
+observerLeave3.observe(counter3);
+
+function createObserver(elementId) {
+  let element = document.querySelector(`#${elementId}`);
+  let observer = new IntersectionObserver(
+    function (entries) {
+      if (entries[0].isIntersecting === true) {
+        element.classList.add("fade-in");
+      }
+      else { element.classList.remove("fade-in"); }
+    }
+  );
+
+  observer.observe(element);
+}
+
+createObserver("stat1");
+createObserver("stat2");
+createObserver("stat3");
+createObserver("border1");
+createObserver("border2");
+
