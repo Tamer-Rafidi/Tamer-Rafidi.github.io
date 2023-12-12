@@ -49,13 +49,13 @@ document.querySelector(".followers").addEventListener("click", function () {
   });
 });  
 
-const following = document.querySelector(".following");
+const toTop = document.querySelector(".to-top");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
-    following.classList.add("active");
+    toTop.classList.add("active");
   } else {
-    following.classList.remove("active");
+    toTop.classList.remove("active");
   }
 });
 
