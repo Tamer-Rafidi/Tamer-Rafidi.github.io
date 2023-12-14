@@ -448,7 +448,7 @@ span{
   color: #2d2c2a;
   margin : 0px 1rem;
   padding: 1rem 1rem;
-  background-color: #96b6b1;
+  border-radius: 25px;
   /* border: blue 5px solid; */
   margin-top: 2%;
 }
@@ -532,3 +532,39 @@ span{
   opacity: 1;
 }
 
+.projects{
+  height: 100vh;
+  background-color: #f9eede;
+  margin: 0px;
+}
+.project-header{
+  color: #2d2c2a;
+  padding-top: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.project-cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-content {
+  display: flex;
+  flex-wrap: wrap; 
+  width: 80%;
+  height: 200vh;
+  margin: 0px;
+  border: red 5px solid;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.project-content .project1 {
+  flex-basis: calc(33.33% - 20px); 
+  margin: 10px;
+  margin-top: 0px; 
+  height: 30vh;
+  border: red 5px solid;
+}

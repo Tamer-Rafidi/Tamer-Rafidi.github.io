@@ -1,9 +1,12 @@
 function toggleModal(modalSelector, shouldOpen) {
   var modal = document.querySelector(modalSelector);
+  var modalContent = modal.querySelector(".icons-following");
   if (shouldOpen) {
     modal.style.display = "flex";
     document.body.style.overflow = "hidden";
-  } else {
+    modalContent.scrollTop = 0;
+  } 
+  else {
     modal.style.display = "none";
     document.body.style.overflow = "auto";
   }
