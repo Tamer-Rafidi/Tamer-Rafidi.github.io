@@ -111,7 +111,7 @@ observerEnter.observe(counter);
 observerLeave.observe(counter);
 
 let counter2 = document.querySelector(".project-counter");
-let target2 = 18;
+let target2 = 9;
 let count2 = 0;
 let increment = 1;
 let interval2;
@@ -128,7 +128,7 @@ let observerEnter2 = new IntersectionObserver(
           clearInterval(interval2);
           observerEnter2.unobserve(counter2);
         }
-      }, 100);
+      }, 200);
     }
   },
 );
