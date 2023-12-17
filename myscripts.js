@@ -176,7 +176,7 @@ let observerLeave3 = new IntersectionObserver(
       observerEnter3.observe(counter3);
     }
   },
-  { threshold: [0.5] }
+  { threshold: [0] }
 );
 
 observerEnter3.observe(counter3);

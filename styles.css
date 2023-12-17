@@ -12,11 +12,13 @@ html{
 }
 
 .name{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 2rem;
+  width: 150px;
+  height: 150px;
+
   color: #96b6b1;
   margin : 0px 1rem;
+  margin-left: 7%;
+  /* border-radius: 30%; */
 }
 
 .about{
