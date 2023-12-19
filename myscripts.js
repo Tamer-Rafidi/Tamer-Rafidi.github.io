@@ -111,7 +111,7 @@ observerEnter.observe(counter);
 observerLeave.observe(counter);
 
 let counter2 = document.querySelector(".project-counter");
-let target2 = 9;
+let target2 = 7;
 let count2 = 0;
 let increment = 1;
 let interval2;
