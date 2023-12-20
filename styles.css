@@ -541,11 +541,11 @@ span{
 .projects{
   height: 200vh;
   background-color: #f9eede;
-  margin: 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border: black 5px solid;
 }
 
 .project-header{
@@ -553,28 +553,44 @@ span{
   padding-top: 10vh;
   display: flex;
   justify-content: center;
+  border: red 5px solid;
 }
 
 .project-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  width: 60vw;
+  width: 80vw;
   height: 180vh;
-  margin-top: 0px;
   border: blue 5px solid;
 }
 
-.project{
+.project {
   display: flex;
   flex-direction: row;
+  border: green 5px solid;
+  width: 60vw;
+  margin-top: 5%;
+  background-color: #f0e5d3;
+  border-radius: 25px;
+}
 
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.project.odd {
+  align-self: flex-start;
+}
+
+.project.even {
+  align-self: flex-end;
 }
 
 .project-card{
   width: 30vw;
-  height: 500px;
+  height: 30vh;
   border-radius: 25px;
   background-color: #96b6b1;
   margin: 20px;
@@ -582,6 +598,16 @@ span{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20px;
   box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.37);
+}
+
+.project-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 2%;
+}
+
+.project-info h1{
+  text-decoration: underline;
 }
