@@ -561,7 +561,7 @@ span{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 80vw;
+  width: 85vw;
   height: 180vh;
   /* border: blue 5px solid; */
 }
@@ -599,6 +599,10 @@ span{
   justify-content: space-evenly;
   align-items: center;
   box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.37);
+}
+
+.project.even .project-info{
+  margin-left: 20px;
 }
 
 .project-info{
