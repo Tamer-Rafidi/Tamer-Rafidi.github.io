@@ -545,7 +545,7 @@ span{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: black 5px solid;
+  /* border: black 5px solid; */
 }
 
 .project-header{
@@ -553,7 +553,7 @@ span{
   padding-top: 10vh;
   display: flex;
   justify-content: center;
-  border: red 5px solid;
+  /* border: red 5px solid; */
 }
 
 .project-content {
@@ -563,16 +563,16 @@ span{
   align-items: center;
   width: 80vw;
   height: 180vh;
-  border: blue 5px solid;
+  /* border: blue 5px solid; */
 }
 
 .project {
   display: flex;
   flex-direction: row;
-  border: green 5px solid;
+  /* border: green 5px solid; */
   width: 60vw;
   margin-top: 5%;
-  background-color: #f0e5d3;
+  background-color: #f5e8d2;
   border-radius: 25px;
 }
 
@@ -608,6 +608,9 @@ span{
   margin-bottom: 2%;
 }
 
-.project-info h1{
-  text-decoration: underline;
+.project-title {
+  /* Other styles */
+  border-bottom: 4px solid currentColor;
+  display: inline-block;
+  width: 95%;
 }
