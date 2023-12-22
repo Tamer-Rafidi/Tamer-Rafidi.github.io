@@ -69,6 +69,13 @@ about.addEventListener("click", () => {
   targetElement.scrollIntoView({ behavior: "smooth" });
 });
 
+const projects = document.querySelector(".navbar-projects");
+const targetProjects = document.querySelector(".projects");
+
+projects.addEventListener("click", () => {
+  targetProjects.scrollIntoView({ behavior: "smooth" });
+});
+
 let counter = document.querySelector(".counter");
 let target = 10000;
 let count = 0;
