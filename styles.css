@@ -531,7 +531,7 @@ span{
 
 #stat1, #stat2, #stat3, #border1, #border2, #project1, #project2{
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1.4s ease-in-out;
 }
 
 #stat1.fade-in, #stat2.fade-in, #stat3.fade-in, #border1.fade-in, #border2.fade-in, #project1.fade-in, #project2.fade-in{
@@ -633,6 +633,18 @@ span{
   display: inline-block;
   width: 95%;
   color: #2d2c2a;
+}
+
+.project-img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.project-img:hover{
+  transform: scale(1.5) rotate(360deg) translateY(-5px) translateX(5px);
+  transition: transform 0.5s ease;
+  filter: invert(72%) sepia(24%) saturate(219%) hue-rotate(121deg) brightness(94%) contrast(88%);
 }
 
 .project-skills{
