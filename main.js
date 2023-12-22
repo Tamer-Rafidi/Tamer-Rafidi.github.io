@@ -201,4 +201,6 @@ createObserver("stat2");
 createObserver("stat3");
 createObserver("border1");
 createObserver("border2");
+createObserver("project1");
+createObserver("project2");
 
