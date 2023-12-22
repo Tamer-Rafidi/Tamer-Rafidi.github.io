@@ -478,6 +478,12 @@ span{
   /* border: green 5px solid; */
 }
 
+.about-intro p:hover{
+  transform: scale(1.1) translateX(30px);
+  transition: all 0.3s ease 0s;
+  background-color: #acd0cb;
+}
+
 .about-stats{
   width: 50%;
   height: 80vh;
@@ -642,7 +648,7 @@ span{
 }
 
 .project-img:hover{
-  transform: scale(1.5) rotate(360deg) translateY(-5px) translateX(5px);
+  transform: scale(1.5) translateY(-5px) translateX(5px);
   transition: transform 0.5s ease;
   filter: invert(72%) sepia(24%) saturate(219%) hue-rotate(121deg) brightness(94%) contrast(88%);
 }
