@@ -529,12 +529,12 @@ span{
   border-radius: 10px;
 }
 
-#stat1, #stat2, #stat3, #border1, #border2{
+#stat1, #stat2, #stat3, #border1, #border2, #project1, #project2{
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
-#stat1.fade-in, #stat2.fade-in, #stat3.fade-in, #border1.fade-in, #border2.fade-in{
+#stat1.fade-in, #stat2.fade-in, #stat3.fade-in, #border1.fade-in, #border2.fade-in, #project1.fade-in, #project2.fade-in{
   opacity: 1;
 }
 
