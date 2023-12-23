@@ -210,4 +210,7 @@ createObserver("border1");
 createObserver("border2");
 createObserver("project1");
 createObserver("project2");
+createObserver("project3");
+createObserver("project4");
+createObserver("project5");
 

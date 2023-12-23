@@ -265,14 +265,6 @@ header{
   /* border: red 5px solid; */
 }
 
-.Projects{
-  height: 1000px;
-  background-color: #2d2c2a;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 20vh;
-}
-
 .icons{
   height: 80%;
   display: flex;
@@ -535,17 +527,16 @@ span{
   border-radius: 10px;
 }
 
-#stat1, #stat2, #stat3, #border1, #border2, #project1, #project2{
+#stat1, #stat2, #stat3, #border1, #border2, #project1, #project2, #project3, #project4, #project5{
   opacity: 0;
-  transition: opacity 1.4s ease-in-out;
+  transition: opacity 1.2s ease-in-out;
 }
 
-#stat1.fade-in, #stat2.fade-in, #stat3.fade-in, #border1.fade-in, #border2.fade-in, #project1.fade-in, #project2.fade-in{
+#stat1.fade-in, #stat2.fade-in, #stat3.fade-in, #border1.fade-in, #border2.fade-in, #project1.fade-in, #project2.fade-in,#project3.fade-in, #project4.fade-in, #project5.fade-in{
   opacity: 1;
 }
 
 .projects{
-  height: 200vh;
   background-color: #f9eede;
   display: flex;
   flex-direction: column;
@@ -568,7 +559,7 @@ span{
   justify-content: space-between;
   align-items: center;
   width: 85vw;
-  height: 180vh;
+  height: 230vh;
   /* border: blue 5px solid; */
 }
 
@@ -582,6 +573,10 @@ span{
   border-radius: 25px;
 }
 
+#project1:hover, #project2:hover, #project3:hover, #project4:hover{
+  transform: scale(1.1);
+  transition: all 0.3s ease 0s;
+}
 .project:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -641,11 +636,17 @@ span{
   color: #2d2c2a;
 }
 
+.project-title a{
+  text-decoration: none;
+}
+
 .project-img {
   width: 30px;
   height: 30px;
   vertical-align: middle;
+  margin-right: 10px;
 }
+
 
 .project-img:hover{
   transform: scale(1.5) translateY(-5px) translateX(5px);
