@@ -649,3 +649,17 @@ span{
   transition: all 0.3s ease 0s;
 }
 
+.experience{
+  background-color: #f9eede;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience h1{
+  color: #2d2c2a;
+  padding-top: 10vh;
+  display: flex;
+  justify-content: center;
+}
