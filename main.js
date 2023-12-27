@@ -214,3 +214,22 @@ createObserver("project3");
 createObserver("project4");
 createObserver("project5");
 
+function fadeObserver(elementClass) {
+  let elements = document.querySelectorAll(`.${elementClass}`);
+  let observer = new IntersectionObserver(function (entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting === true) {
+        entry.target.classList.add("in-view");
+      } 
+      else {
+        entry.target.classList.remove("in-view");
+      }
+    });
+  }, { threshold: [1] });
+
+  elements.forEach((element) => {
+    observer.observe(element);
+  });
+}
+
+fadeObserver("experience-card");
