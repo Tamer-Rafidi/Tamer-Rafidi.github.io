@@ -703,7 +703,7 @@ span{
   height: 100%;
   margin-left: 5%;
   background-color: #f5e8d2;
-  transition: top 0.5s ease, opacity 0.5s ease;
+  transition: top 0.5s ease, opacity 1s ease;
   border-radius: 10%;
   visibility: hidden;
   opacity: 0;
