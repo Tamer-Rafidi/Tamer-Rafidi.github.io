@@ -76,6 +76,35 @@ projects.addEventListener("click", () => {
   targetProjects.scrollIntoView({ behavior: "smooth" });
 });
 
+const experience = document.querySelector(".navbar-experience");
+const targetExperience = document.querySelector(".experience");
+
+experience.addEventListener("click", () => {
+  targetExperience.scrollIntoView({ behavior: "smooth" });
+});
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const word = ["Engineer", "Designer", "Developer", "Programmer", "Creator", "Innovator", "Leader", "Thinker", "Problem Solver", "Student", "Friend", "Teammate", "Hacker", "Maker", "Doer", "Dreamer", "Builder", "Tinkerer", "Collaborator", "Learner"]
+let maxLetters = 10;
+
+document.querySelector(".message").onmouseover = event => {
+  let iterations = 0;
+
+  const interval = setInterval(() => {
+    event.target.innerText = event.target.innerText.slice(0, maxLetters).split("")
+      .map(letter => letters[Math.floor(Math.random() * 20)])
+      .join("");
+
+    if(iterations >= 15){
+      clearInterval(interval);
+      let randomWord = word[Math.floor(Math.random() * word.length)]; 
+      event.target.innerText = randomWord.slice(0, maxLetters); 
+    } 
+
+    iterations += 1;
+  }, 50);
+}
+
 let counter = document.querySelector(".counter");
 let target = 10000;
 let count = 0;
@@ -213,23 +242,3 @@ createObserver("project2");
 createObserver("project3");
 createObserver("project4");
 createObserver("project5");
-
-function fadeObserver(elementClass) {
-  let elements = document.querySelectorAll(`.${elementClass}`);
-  let observer = new IntersectionObserver(function (entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting === true) {
-        entry.target.classList.add("in-view");
-      } 
-      else {
-        entry.target.classList.remove("in-view");
-      }
-    });
-  }, { threshold: [1] });
-
-  elements.forEach((element) => {
-    observer.observe(element);
-  });
-}
-
-fadeObserver("experience-card");

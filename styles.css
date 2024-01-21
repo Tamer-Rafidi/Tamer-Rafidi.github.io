@@ -29,7 +29,6 @@ html{
 }
 
 .intro{
-  font-family:'Montserrat', sans-serif ;
   width: 50%;
   height: 95vh;
   justify-content: space-evenly;
@@ -43,21 +42,18 @@ html{
   margin-top: 20vh;
   margin-bottom: 1vh;
   text-align: justify;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .handle{
   font-size: 18px;
-  margin-bottom: 4vh;
+  margin-bottom: 3vh;
   text-align: justify;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .message{
-  font-size: 18px;
-  margin-bottom: 20vh;
+  font-size: 6rem;
+  margin-bottom: 4vh;
   text-align: justify;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .pfp{
@@ -177,7 +173,7 @@ header{
   transition: all 0.3s ease 0s;
 }
 
-.cta:hover, .follow:hover{
+.cta:hover, .follow:hover, .resume:hover{
   background-color: #7f9692;
 }
 
@@ -655,8 +651,8 @@ span{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 180vh;
-  border: red 1px solid;
+  height: 120vh;
+  /* border: red 1px solid; */
 }
 
 .experience h1{
@@ -668,57 +664,154 @@ span{
 }
 
 .experience-content {
-  width: 90vw;
-  height: 160vh;
+  width: 85vw;
+  height: 80vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  border: red 1px solid;
+  /* border: red 1px solid; */
 }
 
-.experience-card img{
-  width: 200px;
-  height: 200px;
-  border-radius: 25px;
-  margin: 10% 10% 10% 10%;
-
-}
 .experience-card {
   width: 40vw;
   height: 55vh;
-  background-color: #96b6b1;
+  background-color: #f5e8d2;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  transition: transform 0.5s ease;
   margin-bottom: 25%; 
   border-radius: 10%;
-  box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.5);
-  z-index: 2;
+  box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.1);
+  /* border: red 1px solid; */
 }
 
-.experience-info {
-  position: absolute;
-  top: 0%; 
-  width: 90%;
-  height: 100%;
-  margin-left: 5%;
-  background-color: #f5e8d2;
-  transition: top 0.5s ease, opacity 1s ease;
-  border-radius: 10%;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 1;
+.experience-position {
+  display: flex;
+  flex-direction: row;
+  /* border: blue 1px solid; */
 }
 
-.experience-card.in-view {
-  transform: scale(0.7);
-  background-color: #acd0cb;
+.experience-info{
+  /* border : green 1px solid; */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.experience-card.in-view .experience-info {
-  top: 90%; 
-  visibility: visible;
-  opacity: 1;
-  
+.experience-position img {
+  width: 150px;
+  height: 150px;
+  margin: 5% 5% 5% 5%;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-bottom: 2%;
+  width: 90vw;
+  /* border: orange 1px solid; */
+}
+
+.experience-place {
+  border-bottom: 4px solid currentColor;
+  font-size: 30px;
+  font-weight: bold;
+  width: 95%;
+  color: #2d2c2a;
+}
+
+.transition2{
+  height: 5vh;
+  background: linear-gradient(#f9eede, #2d2c2a);
+}
+
+
+.footer{
+  background: #2d2c2a;
+  height: 35vh; 
+  width: 100%;
+  padding-top: 40px;
+  color: #f9eede;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+.footer-content h3{
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p{
+  /* max-width: 500px; */
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.resume{
+  padding: 10px 20px;
+  background-color: #96b6b1;
+  color: #f9eede;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+  margin: 0 10px;
+}
+
+.socials a{
+  text-decoration: none;
+  color: #f9eede;
+}
+
+.socials a i{
+  font-size: 1.5rem;
+  transition: color .4s ease;
+
+}
+.socials a:hover i{
+  color: #96b6b1;
+}
+
+.footer-bottom{
+  background: #2d2c2a;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
 }
 
