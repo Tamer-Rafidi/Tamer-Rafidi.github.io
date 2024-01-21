@@ -83,27 +83,43 @@ experience.addEventListener("click", () => {
   targetExperience.scrollIntoView({ behavior: "smooth" });
 });
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const word = ["Engineer", "Designer", "Developer", "Programmer", "Creator", "Innovator", "Leader", "Thinker", "Problem Solver", "Student", "Friend", "Teammate", "Hacker", "Maker", "Doer", "Dreamer", "Builder", "Tinkerer", "Collaborator", "Learner"]
-let maxLetters = 10;
 
-document.querySelector(".message").onmouseover = event => {
-  let iterations = 0;
-
-  const interval = setInterval(() => {
-    event.target.innerText = event.target.innerText.slice(0, maxLetters).split("")
-      .map(letter => letters[Math.floor(Math.random() * 20)])
-      .join("");
-
-    if(iterations >= 15){
-      clearInterval(interval);
-      let randomWord = word[Math.floor(Math.random() * word.length)]; 
-      event.target.innerText = randomWord.slice(0, maxLetters); 
-    } 
-
-    iterations += 1;
-  }, 50);
+const text = document.querySelector(".message");
+const width = document.querySelector(".intro .message")
+const textLoad = () => {
+    setTimeout(() => {
+        text.textContent = "Engineer";
+        width.style.width = "20.5vw";
+    }, 0);
+    setTimeout(() => {
+        text.textContent = "Innovator";
+        width.style.width = "21vw";
+    }, 3000);
+    setTimeout(() => {
+        text.textContent = "Software Developer";
+        width.style.width = "43vw";
+    }, 6000);
+    setTimeout(() => {
+        text.textContent = "Collaborator";
+        width.style.width = "26.5vw";
+    }, 9000); 
+    setTimeout(() => {
+        text.textContent = "Web Developer";
+        width.style.width = "34vw";
+    }, 12000); 
+    setTimeout(() => {
+        text.textContent = "Thinker";
+        width.style.width = "17vw";
+    }, 15000); 
+    setTimeout(() => {
+        text.textContent = "Problem Solver";
+        width.style.width = "33vw";
+    }, 18000); 
 }
+
+textLoad();
+setInterval(textLoad, 21000);
 
 let counter = document.querySelector(".counter");
 let target = 10000;
