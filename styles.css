@@ -47,7 +47,7 @@ html{
 
 .intro .message{
   position: relative;
-  color: #f9eede;
+  color: #c5b8a4;
   font-size: 4rem;
   font-weight: 600;
   width: 30vw; 
@@ -536,12 +536,12 @@ span{
   border-radius: 10px;
 }
 
-#stat1, #stat2, #stat3, #border1, #border2, #project1, #project2, #project3, #project4, #project5{
+#stat1, #stat2, #stat3, #border1, #border2, #project1, #project2, #project3, #project4, #project5, #experience1, #experience2{
   opacity: 0;
   transition: opacity 1.2s ease-in-out;
 }
 
-#stat1.fade-in, #stat2.fade-in, #stat3.fade-in, #border1.fade-in, #border2.fade-in, #project1.fade-in, #project2.fade-in,#project3.fade-in, #project4.fade-in, #project5.fade-in{
+#stat1.fade-in, #stat2.fade-in, #stat3.fade-in, #border1.fade-in, #border2.fade-in, #project1.fade-in, #project2.fade-in,#project3.fade-in, #project4.fade-in, #project5.fade-in, #experience1.fade-in, #experience2.fade-in{
   opacity: 1;
 }
 
@@ -578,7 +578,7 @@ span{
   border-radius: 25px;
 }
 
-#project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover{
+#project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover, #experience1:hover, #experience2:hover{
   transform: scale(1.1);
   transition: all 0.3s ease 0s;
 }
@@ -679,15 +679,14 @@ span{
   background-color: #f9eede;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
-  height: 120vh;
-  /* border: red 1px solid; */
+  height: 100vh;
+  padding-top: 5%;
 }
 
 .experience h1{
   color: #2d2c2a;
-  padding-top: 10vh;
   display: flex;
   justify-content: center;
   margin-bottom: 5%;
@@ -700,7 +699,6 @@ span{
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  /* border: red 1px solid; */
 }
 
 .experience-card {
@@ -713,7 +711,6 @@ span{
   margin-bottom: 25%; 
   border-radius: 10%;
   box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.1);
-  /* border: red 1px solid; */
 }
 
 .experience-position {
@@ -724,17 +721,24 @@ span{
 
 .experience-info{
   /* border : green 1px solid; */
-  height: auto;
+  height: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: flex-start;
+  background-color: #96b6b1;
+  box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.5);
+  border-radius: 25px;
+  margin: 1% 5% 5% 5%;
 }
 
 .experience-position img {
   width: 150px;
   height: 150px;
   margin: 5% 5% 5% 5%;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.3);
 }
 
 .text-section {
@@ -745,6 +749,32 @@ span{
   margin-bottom: 2%;
   width: 90vw;
   /* border: orange 1px solid; */
+  background-color: #e6d2af;
+  border-radius: 25px;
+  padding: 2%;
+  margin: 5% 5% 5% 1%;
+  box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.3);
+}
+
+.experience ul li {
+  background: url('img/Experience/laptop-code.svg') no-repeat left center;
+  background-size: 20px; 
+  padding-left: 5%; 
+  margin: 2%;
+  list-style-type: none; 
+}
+
+.experience-info h1{
+  padding-left: 2%;
+  margin-bottom: 0%;
+  border-bottom: 4px solid currentColor;
+  width: 95%;
+  display: inline-block;
+}
+.experience-info li{
+  color: #2d2c2a;
+  font-size: 1rem;
+  margin-bottom: 2%;
 }
 
 .experience-place {
