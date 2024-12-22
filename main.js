@@ -83,40 +83,57 @@ experience.addEventListener("click", () => {
   targetExperience.scrollIntoView({ behavior: "smooth" });
 });
 
-const word = ["Engineer", "Designer", "Developer", "Programmer", "Creator", "Innovator", "Leader", "Thinker", "Problem Solver", "Student", "Friend", "Teammate", "Hacker", "Maker", "Doer", "Dreamer", "Builder", "Tinkerer", "Collaborator", "Learner"]
 
 const text = document.querySelector(".message");
 const width = document.querySelector(".intro .message")
 const textLoad = () => {
+    console.log("Screen width: " + window.innerWidth + "px");
+    const setWidth = (defaultWidth) => {
+        const screenWidth = window.innerWidth;
+        let widthPercentage;
+
+        if (screenWidth > 1900) {
+            widthPercentage = defaultWidth; // Increase width for smaller screens
+        } else if (screenWidth > 1200) {
+            widthPercentage = parseFloat(defaultWidth) * 1.25 + "%"; // Slightly increase width for medium screens
+            console.log("Width percentage: " + widthPercentage);
+        } else {
+            widthPercentage = defaultWidth; // Use default width for larger screens
+            console.log("Width percentage2: " + widthPercentage);
+        }
+
+        return widthPercentage;
+    };
+
     setTimeout(() => {
         text.textContent = "Engineer";
-        width.style.width = "20.5vw";
+        width.style.width = setWidth("32%");
     }, 0);
     setTimeout(() => {
         text.textContent = "Innovator";
-        width.style.width = "21vw";
+        width.style.width = setWidth("34%");
     }, 3000);
     setTimeout(() => {
         text.textContent = "Software Developer";
-        width.style.width = "43vw";
+        width.style.width = setWidth("37%");
     }, 6000);
     setTimeout(() => {
         text.textContent = "Collaborator";
-        width.style.width = "26.5vw";
+        width.style.width = setWidth("43%");
     }, 9000); 
     setTimeout(() => {
         text.textContent = "Web Developer";
-        width.style.width = "34vw";
+        width.style.width = setWidth("40%");
     }, 12000); 
     setTimeout(() => {
         text.textContent = "Thinker";
-        width.style.width = "17vw";
+        width.style.width = setWidth("27%");
     }, 15000); 
     setTimeout(() => {
         text.textContent = "Problem Solver";
-        width.style.width = "33vw";
+        width.style.width = setWidth("34%");
     }, 18000); 
-}
+};
 
 textLoad();
 setInterval(textLoad, 21000);
