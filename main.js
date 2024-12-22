@@ -124,9 +124,9 @@ setInterval(textLoad, 21000);
 let counter = document.querySelector(".counter");
 let target = 10000;
 let count = 0;
-let minIncrement = 1; // minimum increment
-let maxIncrement = 100; // maximum increment
-let interval; // Declare interval variable outside the observer callback
+let minIncrement = 1; 
+let maxIncrement = 100; 
+let interval; 
 
 let observerEnter = new IntersectionObserver(
   function (entries) {
@@ -163,7 +163,7 @@ observerEnter.observe(counter);
 observerLeave.observe(counter);
 
 let counter2 = document.querySelector(".project-counter");
-let target2 = 7;
+let target2 = 8;
 let count2 = 0;
 let increment = 1;
 let interval2;
@@ -258,5 +258,7 @@ createObserver("project2");
 createObserver("project3");
 createObserver("project4");
 createObserver("project5");
+createObserver("project6");
 createObserver("experience1");
 createObserver("experience2");
+createObserver("experience3");

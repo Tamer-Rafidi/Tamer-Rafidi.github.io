@@ -536,12 +536,12 @@ span{
   border-radius: 10px;
 }
 
-#stat1, #stat2, #stat3, #border1, #border2, #project1, #project2, #project3, #project4, #project5, #experience1, #experience2{
+#stat1, #stat2, #stat3, #border1, #border2, #project1, #project2, #project3, #project4, #project5, #project6, #experience1, #experience2, #experience3{
   opacity: 0;
   transition: opacity 1.2s ease-in-out;
 }
 
-#stat1.fade-in, #stat2.fade-in, #stat3.fade-in, #border1.fade-in, #border2.fade-in, #project1.fade-in, #project2.fade-in,#project3.fade-in, #project4.fade-in, #project5.fade-in, #experience1.fade-in, #experience2.fade-in{
+#stat1.fade-in, #stat2.fade-in, #stat3.fade-in, #border1.fade-in, #border2.fade-in, #project1.fade-in, #project2.fade-in,#project3.fade-in, #project4.fade-in, #project5.fade-in, #project6.fade-in , #experience1.fade-in, #experience2.fade-in, #experience3.fade-in{
   opacity: 1;
 }
 
@@ -566,7 +566,7 @@ span{
   justify-content: space-between;
   align-items: center;
   width: 85vw;
-  height: 230vh;
+  height: 260vh;
 }
 
 .project {
@@ -578,7 +578,7 @@ span{
   border-radius: 25px;
 }
 
-#project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover, #experience1:hover, #experience2:hover{
+#project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover, #project6:hover, #experience1:hover, #experience2:hover, #experience3:hover{
   transform: scale(1.1);
   transition: all 0.3s ease 0s;
 }
@@ -681,7 +681,7 @@ span{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  height: 160vh;
   padding-top: 5%;
 }
 
@@ -708,7 +708,7 @@ span{
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 25%; 
+  margin-bottom: 5%; 
   border-radius: 10%;
   box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.1);
 }
@@ -875,3 +875,10 @@ span{
   text-transform: capitalize;
 }
 
+
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: lightblue;
+    font-size: 2%;
+  }
+}
